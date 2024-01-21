@@ -1,0 +1,102 @@
+.container {
+  align-items: center;
+
+  display: flex;
+  flex-direction: column;
+  
+  padding: 10px;
+  gap: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.container-image {
+  width: 190px;
+}
+.container-converter {
+  width: 290px;
+}
+
+.container-converter h1 {
+  font-size: 22px;
+  margin-bottom: 1.5rem;
+  color: #A76DDD;
+  text-align: center;
+}
+
+.input-group,
+.output-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.2rem;
+}
+
+.input-group label,
+.output-group label {
+  margin-bottom: 0.4rem;
+  font-weight: bold;
+  color: #441274;
+}
+
+input, select {
+  border: none;
+  height: 24px;
+  border-radius: 6px;
+  outline: none;
+}
+
+input {  
+  font-size: 1rem;
+  color: #A76DDD;
+}
+
+input::placeholder {
+  color: #A76DDD;
+  font-weight: bolder;
+}
+
+select {
+  color: #78519C;
+  font-size: .8rem;
+}
+
+button {
+  border: none;
+  outline: none;
+  margin-bottom: 10px;
+  background-color: #774caf;
+  font-size: 1rem;
+
+  color: #FFF;
+  padding: 0.5rem .9rem;
+  
+  border-radius: 5px;
+  transition: all ease 0.1s;
+  box-shadow: 0px 5px 0px 0px #A76DDD;
+  cursor: pointer;
+}
+
+button:active {
+  transform: translateY(5px);
+  box-shadow: 0px 0px 0px 0px #A76DDD;
+}
+
+.output-group {
+  margin-top: 10px;
+}
+
+#message {
+  font-size: .8rem;
+  color: #A76DDD;
+  margin-top: .7rem;
+  text-align: center;
+}
+
+@media (min-width: 800px) {
+  .container {
+    width: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+}
