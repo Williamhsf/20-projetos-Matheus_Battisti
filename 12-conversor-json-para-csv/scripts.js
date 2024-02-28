@@ -42,7 +42,6 @@ function jsonToCsv(json) {
   return csvRows.join("\n");
 }
 
-
 jsonToCsvButton.addEventListener("click", function() {
   const json = JSON.parse(converterInput.value.trim());
   const csv = jsonToCsv(json);
@@ -65,51 +64,52 @@ function downloadCsv(csv) {
   document.body.removeChild(downloadLink);
 }
 
-// function csvToJson(csv) {
-//   const lines = csv.split("\n");
-//   const headers = lines[0].split(",");
-//   const json = [];
+function csvToJson(csv) {
+  const lines = csv.split("\n");
+  const headers = lines[0].split(",");
+  const json = [];
 
 //   // Remover outro JSON
-//   const preTags = document.querySelectorAll("pre");
-//   preTags.forEach((tag) => {
-//     tag.remove();
-//   });
+  const preTags = document.querySelectorAll("pre");
+  preTags.forEach((tag) => {
+    tag.remove();
+  });
 
-//   for (let i = 1; i < lines.length; i++) {
-//     const values = lines[i].split(",");
-//     const row = {};
+  for (let i = 1; i < lines.length; i++) {
+  // valores de cada uma das linhas
+    const values = lines[i].split(",");
+    const row = {};
 
-//     for (let j = 0; j < headers.length; j++) {
-//       let value = values[j];
-//       if (value[0] === "{" || value[0] === "[") {
-//         value = JSON.parse(value);
-//       }
-//       row[headers[j]] = value;
-//     }
+    for (let j = 0; j < headers.length; j++) {
+      let value = values[j];
+      if (value[0] === "{" || value[0] === "[") {
+        value = JSON.parse(value);
+      }
+      row[headers[j]] = value;
+    }
 
-//     json.push(row);
-//   }
+    json.push(row);
+  }
 
-//   return json;
-// }
+   console.log(json);
 
-// jsonToCsvButton.addEventListener("click", function () {
-//   const json = JSON.parse(converterInput.value.trim());
-//   const csv = jsonToCsv(json);
-//   downloadCsv(csv);
-// });
+  return json;
+}
 
-// csvToJsonButton.addEventListener("click", function () {
-//   const csv = converterInput.value.trim();
-//   const json = csvToJson(csv);
-//   displayJson(json);
-// });
+jsonToCsvButton.addEventListener("click", function () {
+  const json = JSON.parse(converterInput.value.trim());
+  const csv = jsonToCsv(json);
+  downloadCsv(csv);
+});
 
+csvToJsonButton.addEventListener("click", function () {
+  const csv = converterInput.value.trim();
+  const json = csvToJson(csv);
+  displayJson(json);
+});
 
-
-// function displayJson(json) {
-//   const resultArea = document.createElement("pre");
-//   resultArea.textContent = JSON.stringify(json, null, 2);
-//   document.body.appendChild(resultArea);
-// }
+function displayJson(json) {
+  const resultArea = document.createElement("pre");
+  resultArea.textContent = JSON.stringify(json, null, 2);
+  document.body.appendChild(resultArea);
+}
