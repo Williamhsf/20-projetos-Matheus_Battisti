@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jogo da Advinhação</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="scripts.js" defer></script>
+</head>
+<body>
+  <header>
+    <p>tentativas: <span id="tries-left"></span></p>
+  </header>
+  <div class="container center">
+    <div class="main-header center">
+      <h1>Jogo da Advinhação</h1>
+      <img src="./assets/iterrogation.png" alt="imagem de um ponto de ponto de interrogacao" />
+    </div>
+
+    <div class="game-container">
+      <div id="difficulty-section">
+        <label for="difficulty">Escolha a dificuldade:</label>
+        <select name="difficulty" id="difficulty">
+          <option value="" readonly>Selecione</option>
+          <option value="1">Fácil</option>
+          <option value="2">Médio</option>
+          <option value="3">Difícil</option>
+        </select>
+      </div>
+      <div id="game-section">
+        <p>
+          Eu estou pensando em um número <br> 
+          de 1 a 100. Tente advinhar qual
+        </p>
+        <div id="guess-section" class="center">
+          <input type="text" id="guess" placeholder="Digite sua resposta">
+          <button id="guess-btn">Enviar</button>
+        </div>
+        <div class="choice-section center">
+          <p id="result"></p>
+          <button id="reset-btn">Jogar Novamente</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

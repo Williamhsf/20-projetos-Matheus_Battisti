@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root {
+  --purple-1: #9169A3;
+  --purple-2: #7C4D93;
+  --purple-3: #621B7F;
+  --purple-4: #653384;
+
+  --yellow-1: #F3D86A;
+  --yellow-2: #E7B854;
+  --yellow-3: #D49E2F;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100px;
+  height: auto;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+
+  font-size: 18px;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: .4s;
+}
+
+body {
+  background-color: var(--yellow-1);
+  width: 100%;
+  min-height: 100vh;
+  font-family: "Inter", sans-serif;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+header {
+  width: 100%;
+  height: 40px;
+  padding-right: 10px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+header p {
+  color: var(--purple-3);
+  font-size: 24px;
+  font-weight: 600;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+}
+
+.container {
+  width: 500px;
+  background-color: var(--yellow-2);
+  border-radius: 8px;
+
+  margin: 10px auto;
+  padding: 10px;
+  
+}
+
+.main-header h1{
+  color: var(--purple-4);
+  font-size: 36px;
+}
+
+.game-container {
+  /* border: 1px solid #653384; */
+  width: 400px;
+}
+
+#difficulty-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+#difficulty-section label {
+  color: var(--purple-3);
+  font-weight: 600;
+  font-size: 16px;
+}
+
+#difficulty-section select {
+  background-color: var(--purple-1);
+  padding: 10px;
+  outline: none;
+
+  color: #FFF;
+  font-size: 16px;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+#difficulty-section select option {
+  background-color: var(--purple-2);
+}
+
+#game-section > p {
+  margin: 16px auto;
+
+  color: var(--purple-3);
+  text-align: center;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+#guess-section input {
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  background-color: var(--yellow-1);
+  
+  outline: 0;
+  border: none;
+  border-radius: 5px;
+  
+  color: var(--purple-3);
+  font-size: 16px;
+}
+
+#guess-section input::placeholder {
+  color: var(--purple-1);
+  font-size: 14px;
+}
+
+#guess-section button {
+  background-color: var(--purple-2);
+  
+  color: #FFF;
+  letter-spacing: 1px;
+}
+
+#guess-section button:hover {
+  background-color: var(--purple-3);
+}
+
+.choice-section > p {
+  color: var(--purple-3);
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+#reset-btn {
+  margin-top: 10px;
+  background-color: var(--yellow-1);
+  border: 1px solid var(--yellow-2);
+  
+  color: var(--purple-3);
+}
+
+#reset-btn:hover {
+  background-color: var(--yellow-3);
+}
