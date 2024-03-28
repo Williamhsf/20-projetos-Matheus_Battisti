@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#popup {
+  background-color: rgba(0, 0, 0, 0.5);
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  display: none;
+}
+
+.popup-content {
+  background-color: #FFF;
+  padding: 1.5rem;
+  border-radius: 5px;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: grid;
+  grid-gap: 16px;
+}
+
+.popup-buttons {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.popup-buttons button {
+  background-color: #007BFF;
+  color: #FFF;
+  border: none;
+  border-radius: 5px;
+  padding: 0.6rem 1.5rem;
+
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 16px;
+  
+  cursor: pointer;
+  transition: .4s;
+}
+
+.popup-buttons button:hover {
+  background-color: #2462A3;
+}
+/* 
+
+      <div class="popup-buttons">
+        <button id="cancel-button">cancelar</button>
+        <button class="see-button">
+          <a href="#">veja</a>
+        </button>
+      </div>
+    </div>
+
+*/
